@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Extensos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jura:wght@300..700&family=Kode+Mono:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="#sobre">Sobre</a>
+
+        <a href="#conversor">Conversor</a>
+
+        <a href="#integrantes">Integrantes</a>
+    </nav>
+
+    <div class="sobre_flex">
+        <div class="sobre" id="sobre">
+            <h1>Conversor de Números para Extenso</h1>
+            <p>Este conversor foi desenvolvido para facilitar a transformação de números inteiros em sua forma escrita
+                por
+                extenso. De maneira prática, basta inserir o número desejado que o sistema realiza a conversão
+                automaticamente, exibindo o resultado de forma clara e correta.
+                A ferramenta é útil em diversas situações do dia a dia, como na elaboração de documentos, trabalhos
+                escolares, estudos de matemática ou até mesmo para tirar dúvidas rápidas sobre a escrita correta dos
+                números. Com isso, você ganha mais agilidade e precisão ao lidar com valores numéricos em palavras.</p>
+        </div>
+        <img src="./images/gif.gif" alt="gif" class="gif1">
+    </div>
+
+    <div class="container" id="conversor">
+        <label for="numero_Entrada" class="lable_Entrada" id="cor_de_fundo_label">Digite um número:</label>
+        <br>
+        <input type="number" id="numero_Entrada">
+        <br>
+        <button class="btn_Saida" onclick="saida_Extenso()">Transformar</button>
+        <p id="cor_de_fundo_p">Número por extenso:</p>
+        <div id="resultado"></div>
+    </div>
+
+
+    <footer class="integrantes" id="integrantes">
+        <div class="cosmo">
+            <p>Cosmo Alves</p>
+        </div>
+
+        <div class="pedro">
+            <p>Pedro Henrique Mêna</p>
+        </div>
+
+        <div class="vinicius">
+            <p>Vinicius de Oliveira</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./Js/main.js"></script>
+</body>
+
+</html
