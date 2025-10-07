@@ -6,16 +6,50 @@ alert('Pronto?');
 
 alert('OK, pode usufruir do site agora😁');
 
-
+/**
+ * Verifica se um número é um inteiro positivo.
+ * 
+ * @author Pedro Henrique Mena
+ * @version 1.0
+ * @since 2025-10-06
+ * @param {number} num - O número a ser validado.
+ * @returns {boolean} Retorna true se o número for inteiro e maior ou igual a zero, caso contrário false.
+ * @example
+ * validarNumeros(5); // true
+ * validarNumeros(-2); // false
+ */
 export function validarNumeros(num) {
     return Number.isInteger(num) && num >= 0;
 }
 
+/**
+ * Converte um número de 0 a 9 para sua forma por extenso em português.
+ * 
+ * @author Pedro Henrique Mena
+ * @version 1.0
+ * @since 2025-10-06
+ * @param {number|string} unidade - O número a ser convertido.
+ * @returns {string} O número por extenso correspondente.
+ * @example
+ * converterUnidades(3); // "três"
+ */
 export function converterUnidades(unidade) {
     const unidades = ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"];
     return unidades[parseInt(unidade)];
 }
 
+
+/**
+ * Converte um número de 0 a 99 para sua forma por extenso em português.
+ * 
+ * @author Pedro Henrique Mena
+ * @version 1.0
+ * @since 2025-10-06
+ * @param {number|string} numero - O número a ser convertido.
+ * @returns {string} O número por extenso correspondente.
+ * @example
+ * converterDezenas(42); // "quarenta e dois"
+ */
 export function converterDezenas(numero) {
     const n = parseInt(numero);
     const unidades = ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"];
@@ -30,6 +64,18 @@ export function converterDezenas(numero) {
     return uni === 0 ? dezenasNormais[dez] : `${dezenasNormais[dez]} e ${unidades[uni]}`;
 }
 
+
+/**
+ * Converte um número de 0 a 999 para sua forma por extenso em português.
+ * 
+ * @author Pedro Henrique Mena
+ * @version 1.0
+ * @since 2025-10-06
+ * @param {number|string} numero - O número a ser convertido.
+ * @returns {string} O número por extenso correspondente.
+ * @example
+ * converterCentenas(256); // "duzentos e cinquenta e seis"
+ */
 export function converterCentenas(numero) {
     const n = parseInt(numero);
     const centenas = ["", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"];
@@ -45,7 +91,19 @@ export function converterCentenas(numero) {
     return `${centTexto} e ${converterDezenas(resto)}`;
 }
 
-
+/**
+ * Converte um número inteiro positivo para sua forma por extenso.
+ * Exibe um alerta caso o número seja inválido.
+ * 
+ * @author Vinícius Gonçalo
+ * @version 1.0
+ * @since 2025-10-06
+ * @param {number} numero - O número a ser convertido.
+ * @returns {string} O número por extenso, ou uma string vazia se o valor for inválido.
+ * @throws {Error} Exibe um alerta em caso de entrada inválida.
+ * @example
+ * numeroParaExtenso(85); // "oitenta e cinco"
+ */
 export function numeroParaExtenso(numero) {
     if (!validarNumeros(numero)) {
         Swal.fire({
